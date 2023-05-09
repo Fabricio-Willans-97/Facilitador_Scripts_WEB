@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="pt-BR">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Facilitador de Scripts</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script src="jquery-3.6.1.js"></script>
+	<script src="scripts.js"></script>
+	<script src="https://momentjs.com/downloads/moment-with-locales.min.js"></script>
+</head>
+
+<body>
+
+	<div id="container">		
+
+		<header class="conteudo-titulo">
+			<a href="index.html"><h1>Facilitador de Scripts WEB</h1></a>
+		</header>
+			
+		<header class="conteudo-subtitulo">
+			<h3>Facilitador (Vers 2.3)</h3>
+		</header>
+
+		<div id="campo-scripts">
+
+		<!-------------------- Seletores p/ copiar-------------------->
+			<div>
+				<label>SITES:</label>
+					<input id="collapsible" class="toggle" type="checkbox">
+					<label for="collapsible" class="lbl-toggle">Selecione o site ...</label>
+						<div class="collapsible-content">
+					  		<div class="content-inner">
+					    		<a href="index.html" target="_blank">Site 1</a> <br>
+					    		<a href="index.html" target="_blank">Site 2</a> <br>
+					    		<a href="index.html" target="_blank">Site 3</a> <br>
+					    		<a href="index.html" target="_blank">Site 4</a> <br>
+					    		<a href="index.html" target="_blank">Site 5</a> <br>
+								<a href="page2.html">Checklist de salas de reunião</a>
+					    	</div>
+						</div> <br> <br>
+
+				<label>SCRIPT:</label> <br>
+				<select id="select" name="select">
+					<option style="display: none;" selected>Selecione seu Script ...</option>
+					<option value="script1">Primeiro contato</option>
+					<option value="script2">Encerramento de chamado</option>
+					<option value="script3">Tentativa de contato</option>
+					<option value="script4">Encerramento sem intervenção técnica</option>
+					<option value="script5">Direcionamento para outro time</option>
+					<option value="script6">Encerramento por tentativas de contato excedidas</option>
+					<option value="script7" onclick = agendAtend()>Agendamento</option>
+					<option value="script8">Script para repassar a operadora de internet</option>
+					<option value="script9">Pendente de fornecedor</option>
+					<option value="script10">Encerramento chamados de Telefonia</option>
+					<option value="script11">Solicitação de aparelho negada</option>
+					<option value="script12">Como conectar no WIFI para visitantes</option>
+					<option value="script13">Reset senha de usuário</option>
+					<option value="script14">Termo de Aceite</option>
+					<option value="script15">Endereço IP no CMD</option>
+					<option value="script16">Desbloqueio de Usuário bloqueado</option>
+					<option value="script17">Filas de Encaminhamento no de chamado</option>
+					<option value="script18">Senhas Diversas</option>
+					<option value="script19">Filas Impressoras</option>
+					<option value="script20">Ligação pelo Cisco Jabber</option>
+					<option value="script21">Comandos Frequentes</option>
+					<option value="script22">Encerramento de Cadastro de crachá p/ impressão</option>
+				</select>
+			</div> <br>
+
+			<label>Scripts para copiar:</label>
+
+			<!-------------------- Scripts pronto -------------------->
+			<div class="caixa-script">
+				<div class="campo-script-copiar" id="scripts" contenteditable>
+					
+					<div class="script1 box">
+						Olá XXXXX, tudo bem? <br> <br>
+						Sou o analista designado para atender o seu chamado XXXXX, sobre XXXXX. Você está disponível nesse momento?
+					</div>
+
+					<div class="script2 box">
+						Sintoma: <br>
+						Causa Raiz: <br>
+						Ação Corretiva: <br> <br>
+						Sempre que precisar de algum atendimento, estarei à disposição!
+					</div>
+
+					<div class="script3 box">
+						1a Tentativa de contato para atendimento <br>
+						------------------------------------------------------------------ <br>
+						Prezado(a) XXXXXXXXXXX. <br> <br>
+
+						Tentamos contato referente ao chamado XXXXXXX, porém, não obtivemos sucesso. <br>
+						Descritivo da(s) tentativa(s) de contato: <br>
+						<script language = javascript type="text/javascript">
+							document.write(`- Teams - ${moment().format('L')} - ${moment().format('HH:mm')} <br>`);
+							document.write(`- Telefone XX 9XXXXXXXX - ${moment().format('L')} - ${moment().format('HH:mm')} <br> <br>`);
+						</script>
+						Retornaremos o contato por mais duas vezes (em dias e horários diferentes), e caso não tenhamos sucesso novamente, seu chamado será encerrado por tentativas de contato excedidas.
+					</div>
+
+					<div class="script4 box">
+						Encerramento de chamado XXXXXXXXX, sem intervenção técnica. <br>
+						Após contato com o colaborador(a), fomos informados que o problema já estava normalizado.
+					</div>
+
+					<div class="script5 box">
+						Nome do solicitante: <br>
+						Contato do solicitante: <br>
+						Local de atendimento: <br>
+						Fabricante: <br>
+						Modelo: <br>
+						Service Tag: <br>
+						Problema identificado: <br>
+						Testes realizados: <br>
+						Diagnostico Dell realizado? Qual o erro?
+					</div>
+
+					<div class="script6 box">
+						Prezado(a) XXXXXXXXX. Como não obtivemos retorno nas tentativas de contato para atendimento do seu chamado de n°: XXXXXXXXX, estamos encerrando-o. 
+						Gentileza abrir um novo chamado caso o problema persista e/ou quando estiver disponível para atendimento.
+					</div>
+
+					<div class="script7 box">
+						Prezado(a) XXXX, <br>
+						Conforme sua solicitação, seu chamado foi agendado para dia XXXXXX às XXXX.
+					</div>
+
+					<div class="script8 box">
+						Pode informar isso para operadora: <br> <br>
+
+						"Para me conectar à VPN IPSEC da minha empresa necessito da liberação nas portas e protocolos abaixo: <br> <br>
+						- Porta UDP/XXXX <br>
+						- Porta UDP/XXXX <br>
+						- Endereço de Destino: exemplo.endereco.com.br <br> <br>
+						Esse pedido visa atender uma demanda de acesso aos sistemas da minha empresa, tendo em vista que estou trabalhando de casa."
+					</div>
+
+					<div class="script9 box">
+						Prezado(a) XXXXXXXXX, <br>
+						Seu chamado XXXXXXX está pendente de atuação do fornecedor XXXXXXXX, referente a ação XXXXXXXXXX. <br>
+						Previsão de retorno/solução: XX / XX / XXXX
+					</div>
+
+					<div class="script10 box">
+						Localidade: <br>
+						Tipo de telefonia: ____ Fixo ____ Móvel <br>
+						Imei Aparelho(Móvel): <br>
+						Marca e Modelo Aparelho: <br>
+						Número da linha: <br>
+						Imei CHIP(móvel): <br>
+						MAC Aparelho(fixo): <br>
+						Causa Raiz: <br>
+						Ação Corretiva: <br>
+						Testes efetuados: Usuário(a) validou ______ com sucesso! <br>
+						OBSERVAÇÃO:
+					</div>
+
+					<div class="script11 box">
+						Caro(a) colaborador(a), XXXXXXXXXXXXXXX, <br>
+						Informamos que as requisições de novos aparelho coorporativos estão suspensas pela diretoria de TI. <br>
+						Podemos fornecer apenas a linha, caso seja do seu interesse precisamos que seja aberto um novo chamado, solicitando uma nova linha.
+					</div>
+
+					<div class="script12 box">
+						1 - Se conectar, na rede WIFI X VISITANTE - ( pelo aparelho móvel do usuário : celular) <br>
+						2 - No navegador, vai aparecer um formulário para ser preenchido, com os dados do visitante inclusive email. A senha de conexão ( ele irá receber, no email que preencheu o formulário). <br>
+						3- é somente se acessar a rede WIFI X VISITANTE , e colocar o email = usuário, e a senha que recebeu em seu email.
+					</div>
+
+					<div class="script13 box">
+						Na barra de endereço digitar : https://reset.senha.user.com <br>
+						Configurações Gerais > Senha do usuário fulano (insira a nova senha).
+					</div>
+
+					<div class="script14 box">
+						Necessito que você assine o termo de aceite para prosseguimos com o processo de (aquisição/devolução/remanejamento) de equipamento. <br> <br>
+
+						Para assinar basta acessar o link: https://portal.do.usuario.com <br> <br>
+
+						Ao acessar o link basta procurar no canto esquerdo da tela o chamado informado xxxxxxx e seguir com o processo de assinatura digital do termo na página que abrir, do lado direito tem um botão azul escrito ASSINAR, basta clicar e desenhar uma assinatura no quadradinho e clicar em "Enviar Assinatura".
+					</div>
+
+					<div class="script15 box">
+						Você vai clicar na lupa ao lado do iniciar e vai digitar CMD, vai abrir o prompt de comando. Ele tem uma tela preta, nele você vai digitar ipconfig e dar enter, vai aparecer uma série de informações. 
+						Eu preciso de uma sequência de números que começa ou com 172. ou com 10. que está descrita na frente de Endereço IPV4.
+					</div>
+
+					<div class="script16 box">
+						Acesse o link o link: https://usuario.bloqueado.com <br>
+						Configurações Gerais > Desbloquear usuário bloqueado.
+					</div>
+
+					<div class="script17 box">
+						<table>
+							<tr><td>TELEFONIA</td>										<td>SUPORTE TELEFONIA</td></tr>
+							<tr><td>SOFTWARE</td>										<td>SUPORTE SOFTWARE</td></tr>
+							<tr><td>BASE DE EQUIPAMENTO</td>							<td>SUPORTE BASE DE EQUIPAMENTO</td></tr>
+							<tr><td>BLUETOOTH / PORTAS / VPN</td>			<td>SUPORTE BLUETOOTH / PORTAS / VPN</td></tr>
+							<tr><td>BANCO DE DADOS</td>									<td>SUPORTE BANCO DE DADOS</td></tr>
+							<tr><td>HOMOLOGAÇÃO DE SOFTWARE</td>						<td>SUPORTE HOMOLOGAÇÃO DE SOFTWARE</td></tr>
+							<tr><td>ACESSO A REDE</td>									<td>SUPORTE ACESSO A REDE</td></tr>
+							<tr><td>USUARIO / EMAIL</td>								<td>SUPORTE USUARIO / EMAIL</td></tr>
+							<tr><td>CONEXAO / REDE</td>									<td>SUPORTE CONEXAO / REDE</td></tr>
+							<tr><td>SMARTPHONE / CELULAR</td>							<td>SSUPORTE SMARTPHONE / CELULAR</td></tr>
+							<tr><td>IMPRESSORA</td>										<td>SUPORTE IMPRESSORA</td></tr>
+							<tr><td>SUPORTE LOCAL</td>									<td>SUPORTE LOCAL</td></tr>
+							<tr><td>SUPORTE REMOTO</td>									<td>SUPORTE REMOTO</td></tr>
+							<tr><td>MNT IMPRESSORA</td>									<td>SUPORTE MNT IMPRESSORA</td></tr>
+							<tr><td>LICENÇAS APPS</td>									<td>SUPORTE LICENÇAS APPS</td></tr>
+							<tr><td>PASTAS DE REDE</td>									<td>SUPORTE PASTAS DE REDE</td></tr>
+							<tr><td>SISTEMAS Y</td>										<td>SUPORTE SISTEMAS Y</td></tr>
+							<tr><td>PORTAL DO CLIENTE</td>								<td>SUPORTE PORTAL DO CLIENTE</td></tr>
+						</table>
+					</div>
+
+					<div class="script18 box">
+						Devido a politica de Segurança da Informação da empresa, as senhas foram desabilitadas para visualização pública.
+						Favor, buscar no repositório local da empresa.
+					</div>
+
+					<div class="script19 box">
+						Devido politica de Segurança da Informação da empresa, os IP's das impressoras não devem ser mostrados ao público.<br> <br>
+
+						Favor, entrar no link abaixo para verificar as filas de impressão: <br> <br>
+
+						<a href="index.html" target="_blank" contenteditable="false">Filas de Impressão</a>
+						
+					</div>
+
+					<div class="script20 box">
+						Como utilizar o Cisco Jabber para ligação: <br> <br>
+						0 015 + (DDD) + (9 XXXX-XXXX) --> Para celular externo; <br>
+						0 021 + (DDD) + (XXXX-XXXX) --> Para telefone fixo externo; <br>
+						0 + (9 XXXX-XXXX) --> Para celular local, sem o DDD; <br>
+						0 + (XXXX-XXXX) --> Para telefone fixo local, sem o DDD.
+					</div>
+
+					<div class="script21 box">
+						Comandos mais usados através do CMD: <br> <br>
+
+						Atualizar Políticas: gpupdate /force <br> <br>
+
+						Verificar usuário no AD: net user /domain MATRICULA <br> <br>
+
+						Serial do equipamento: wmic bios get serialnumber <br> <br>
+
+						Hostname do equipamento: hostname <br> <br>
+
+						Informações do sistema: systeminfo <br> <br>
+
+						Ultimo usuário logado no equipamento: wmic /node:HOSTNAME computersystem get username
+					</div>
+					
+					<div class="script22 box">
+						Sintoma: Impressora funcionando normalmente, crachá não estava cadastrado para impressão, foi incluso o numero XXXX informado pelo usuário. <br>
+						Solicitação: Usuário(a) XXXX, de matricula: XXXX, solicita permissão de impressão para o seu crachá nº XXXX. <br>
+						Solução: Permissão de impressão concedida para o crachá: XXXX. <br> <br>
+
+						Obs.: A replicação com a permissão de imprimir ocorrerá em até 24 horas. Aguardando confirmação da funcionalidade da impressão para o chamado ser encerrado.
+
+					</div>
+
+				</div>
+			</div>
+			<!-------------------- Botão copiador-------------------->
+			<div class="botao">
+				<button onclick="CopyToClipboard('scripts')">COPIAR</button>
+			</div>
+
+		</div>
+
+	</div>
+
+	<div id="alert-texto"></div>
+</body>
+
+</html>

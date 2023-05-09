@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="pt-BR">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Checklist Salas Reunião</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script src="jquery-3.6.1.js"></script>
+	<script src="scripts.js"></script>
+</head>
+
+<body>
+
+	<div id="container">		
+
+		<header class="conteudo-titulo">
+			<a href="page2.html"><h1>CHECKLIST SALAS DE REUNIÃO</h1></a>
+		</header>
+			
+		<header class="conteudo-subtitulo" id="conteudo-subtitulo-page2">
+			<h3>LOCALIZAÇÃO OSAKA - JAPÃO</h3>
+		</header>
+
+		<div id="campo-scripts">
+
+		<!-------------------- Seletores p/ copiar-------------------->
+			<div>
+				<label>SITES:</label>
+					<input id="collapsible" class="toggle" type="checkbox">
+					<label for="collapsible" class="lbl-toggle">Selecione o site ...</label>
+						<div class="collapsible-content">
+					  		<div class="content-inner">
+					    		<a href="page2.html" target="_blank">Site 1</a> <br>
+					    		<a href="page2.html" target="_blank">Site 2</a> <br>
+								<a href="index.html">Facilitador de Scripts WEB</a>
+					    	</div>
+						</div> <br>
+						
+				<div style="margin-bottom: 10px; margin-top: 10px;"><h4>SCRIPT P/ ABERTURA DE CHAMADO</h4></div>
+				<label>Salas de reunião:</label> <br>
+
+				<div>
+					<select id="content">
+						<option style="display: none;" selected>Selecione a sala ...</option>
+						<option value="Gentileza realizar o checklist da sala: Sala 1, no 77° andar na sede ARIGATO em OSAKA - JAPÃO.">Sala 1</option>
+						<option value="Gentileza realizar o checklist da sala: Sala 2, no 77° andar na sede ARIGATO em OSAKA - JAPÃO.">Sala 2</option>
+						<option value="Gentileza realizar o checklist da sala: Sala 3, no 77° andar na sede ARIGATO em OSAKA - JAPÃO.">Sala 3</option>
+						<option value="Gentileza realizar o checklist da sala: Sala 4, no 77° andar na sede ARIGATO em OSAKA - JAPÃO.">Sala 4</option>
+						<option value="Gentileza realizar o checklist da sala: Sala 5, no 77° andar na sede ARIGATO em OSAKA - JAPÃO.">Sala 5</option>
+						<option value="Gentileza realizar o checklist da sala: Sala 6, no 77° andar na sede ARIGATO em OSAKA - JAPÃO.">Sala 6</option>
+						<option value="Gentileza realizar o checklist da sala: Sala 7, no 77° andar na sede ARIGATO em OSAKA - JAPÃO.">Sala 7</option>
+					</select>
+
+					<div class="botao" id="botao-page2"><button onclick="copyToClipboard()">Copiar Script</button></div>
+				</div>
+
+
+			</div>
+
+			<!-------------------- Script p/ encerramento de chamado -------------------->
+			<div style="margin-top: 20px;"><h4>SCRIPT P/ ENCERRAMENTO DE CHAMADO</h4></div>
+			<div class="caixa-script" id="caixa-script-page2">
+				<div class="campo-script-copiar" id="campo-script-copiar-page2" contenteditable>	
+					<p>
+						Checklist realizado com sucesso: <br>
+						Funções testadas: <br>
+						Vídeo <br>
+						Áudio <br>
+						Conexão <br>
+						Apresentação de conteúdo <br>
+						Problema Identificado: XXXX
+					</p>
+				</div>
+			
+				<!-------------------- Botão copiador-------------------->
+				<div class="botao" id="botao-page2">
+					<button onclick="CopyToClipboard('campo-script-copiar-page2')">Copiar Script</button>
+				</div>
+			</div>
+
+		</div>
+		<div class="rodape-page2">
+			Demais duvidas de como realizar o procedimento de checklist nas salas de reunião, acessar o link abaixo: <br> <br>
+			<a target="_blank" href="page2.html">CHECKLIST DAS SALAS DE REUNIÃO - OSAKA - JAPÃO</a>
+		</div>
+
+	</div>
+
+	<div id="alert-texto"></div>
+
+</body>
+
+</html>
